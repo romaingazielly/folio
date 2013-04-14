@@ -1,7 +1,7 @@
 /*----------------------------------
 *							
 *	Version: 1.0				  
-*	Date: 01/01/2013			  
+*	Date: 30/03/2013			  
 *	Author: Romain GAZIELLY	  
 *	Mail: romain.gazielly@gmail.com
 *	Website: www.romaingazielly.com
@@ -9,5 +9,49 @@
 *----------------------------------*/
 
 /*-------------------
-	Code
+	Global
 -------------------*/
+a { text-decoration: none; }
+body, html{ font-size: 1em; line-height: 1.4; font-family: "proxima-nova", "Helvetica Neue", helvetica, arial, sans; width: 100%; height: 100%; font-style: normal; min-height: 100%; -webkit-font-smoothing: antialiased; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+img { vertical-align: middle; }
+fieldset { border: 0; margin: 0; padding: 0; }
+textarea { resize: vertical; }
+h1, h2, h3 { font-family: "Helvetica Neue", helvetica, arial, sans; font-size: 30px; font-style: normal; font-weight: bold; color: #c1c1; padding: 0px; margin: 0px 0px 29px 0px; }
+h2 { font-size: 40px; line-height: 35px; letter-spacing: -2px; }
+h3 { font-size: 30px; line-height: 35px; letter-spacing: -2px; color: #333333; margin: 0px 0px 18px 0px; }
+h4 { font-size: 34px; font-family: "Helvetica Neue", Helvetica, Arial, Sans; color: #333333; letter-spacing: -2px; margin: 40px 0px 25px 0px; }
+
+/*-------------------
+	Header
+-------------------*/
+header nav { background: #1c1c1c; height:85px; width: 100%; opacity:0; }
+header nav ul { width:960px; margin:auto; }
+header nav ul li { float:left; height:85px;  }
+header nav ul li a { color:#fff; padding:30px 25px; box-sizing:border-box; height:85px; display:block; } 
+header nav ul li a:hover { background:rgba(204,17,25,.75); }
+
+header aside { position:relative; display:block; background:#178c83; height:85px; width:0%; border-top:1px solid #fff; }
+header aside p { position:relative; display:block; width:960px; margin:auto; color:#fff; opacity:0; padding: 32px 0; }
+header aside p span { color:#0c615a; padding-left:30px; } 
+header aside p a { background:#11726b; float:right; padding:31px 45px; margin-top:-32px; color:#fff; }
+header aside p a:hover { opacity:.75; }
+
+/*-------------------
+	Works
+-------------------*/
+#container { margin: 0px; width: 100%; height: 100%; min-width: 960px; opacity:0; }
+#works { position: relative; width: 100%; height: 100%; min-height: 800px; overflow: hidden; z-index: 1; }
+.contentwrapper { position: relative; width: 960px; margin: 0 auto; font-size: 13px; line-height: 25px; letter-spacing: 0px; }
+.mini-works { cursor: pointer; position: relative; float: left; width: 258px; height: 210px; color: #535353; clear: none; font-size: 14px; padding: 40px 30px 20px 30px; text-align: center; line-height: 19px; }
+.mini-works li { list-style: none; display: none; margin: 0px; font-weight: bold; font-size: 15px; }
+.mini-works ul { margin: 0px; padding: 0px; width: auto; }
+.button-back { position: absolute; left: 0px; top: 122px; z-index: 999; margin-left: -90px; cursor: pointer; }
+.button-back:hover { opacity: 0.7; }
+.works-detail { margin-top: 25px; position: absolute; color: #535353; width: 960px; line-height: 22px; text-align: left; font-size: 14px; height: 600px; }
+.mini-works:hover { background-color: rgba(204,17,25,0.75); color: #ffffff; -webkit-transition: padding .15s ease-out; -moz-transition: padding .15s ease-out; -o-transition: padding .15s ease-out; transition: padding .15s ease-out; }
+.mini-works:hover h3 { color: #ffffff; }
+.mini-works:hover hr.thick { display: none; }
+.mini-works:hover .description, .mini-works:hover a { display: none; }
+.mini-works:hover .plus { opacity: 0; }
+.mini-works:hover li { display: block; }
