@@ -9,6 +9,20 @@
 *----------------------------------*/
 
 /*-------------------
+	Fonts
+-------------------*/
+@font-face {
+    font-family: 'nexa_bold';
+    src: url('../fonts/Nexa_Free_Bold-webfont.eot');
+    src: url('../fonts/Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Nexa_Free_Bold-webfont.woff') format('woff'),
+         url('../fonts/Nexa_Free_Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Nexa_Free_Bold-webfont.svg#nexa_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*-------------------
 	Global
 -------------------*/
 a { text-decoration: none; }
@@ -25,22 +39,43 @@ h4 { font-size: 34px; font-family: "Helvetica Neue", Helvetica, Arial, Sans; col
 /*-------------------
 	Header
 -------------------*/
-header nav { background: #1c1c1c; height:85px; width: 100%; opacity:0; }
-header nav ul { width:960px; margin:auto; }
-header nav ul li { float:left; height:85px;  }
-header nav ul li a { color:#fff; padding:30px 25px; box-sizing:border-box; height:85px; display:block; } 
-header nav ul li a:hover { background:rgba(204,17,25,.75); }
+header { width:100%; }
+header nav { background: #fff; height:80px; width:960px; margin:auto; }
+header nav ul li { width:99px; }
+header nav ul li a { height:80px; display:block; border-top:solid 1px #fff; border-bottom:solid 1px #fff; box-sizing:border-box; } 
 
-header aside { position:relative; display:block; background:#178c83; height:85px; width:0%; border-top:1px solid #fff; }
-header aside p { position:relative; display:block; width:960px; margin:auto; color:#fff; opacity:0; padding: 32px 0; }
-header aside p span { color:#0c615a; padding-left:30px; } 
-header aside p a { background:#11726b; float:right; padding:31px 45px; margin-top:-32px; color:#fff; }
-header aside p a:hover { opacity:.75; }
+header nav ul#menu li { float:left; }
+header nav ul#menu li a { font:16px "nexa_bold"; color:#2a2a26; padding-top:28px; text-align:center; }
+header nav ul#menu li a:not(#logo):hover { color:#a1a1a1; }
+header nav ul#menu li a#logo { font-size:50px; padding-top:10px; }
+
+header nav ul#social li.flip { position:relative; list-style-type:none; float:right; width:99px; height:80px; border-right:solid 1px #fff; cursor:pointer; }
+header nav ul#social li.flip .recto, header nav ul#social li.flip .verso { position:absolute; height:80px; width:99px; }
+header nav ul#social li.flip div a { display:block; height: 80px; width:99px; }
+header nav ul#social li.flip .recto { -webkit-backface-visibility: hidden; -webkit-transform:rotateY(0deg); -webkit-transition:all .6s ease; }
+header nav ul#social li.flip .verso { -webkit-backface-visibility: hidden; -webkit-transform:rotateY(180deg); -webkit-transition:all .6s ease; }
+
+header nav ul#social li.flip:hover .recto { -webkit-transform:rotateY(180deg); }
+header nav ul#social li.flip:hover .verso { -webkit-transform:rotateY(0deg); }
+
+#nav-facebook .recto { background:url('../pics/assets/facebook-flip.png') no-repeat center #fff; }
+#nav-facebook .verso { background:url('../pics/assets/facebook-flap.png') no-repeat center rgba(42,42,38,1); }
+#nav-twitter .recto { background:url('../pics/assets/twitter-flip.png') no-repeat center #fff; }
+#nav-twitter .verso { background:url('../pics/assets/twitter-flap.png') no-repeat center rgba(42,42,38,1); }
+#nav-viadeo .recto { background:url('../pics/assets/viadeo-flip.png') no-repeat center #fff; }
+#nav-viadeo .verso { background:url('../pics/assets/viadeo-flap.png') no-repeat center rgba(42,42,38,1); }
+#nav-linkedin .recto { background:url('../pics/assets/linkedin-flip.png') no-repeat center #fff; }
+#nav-linkedin .verso { background:url('../pics/assets/linkedin-flap.png') no-repeat center rgba(42,42,38,1); }
+ /*-------------------
+	Home
+-------------------*/
+#container { margin: 0px; width: 100%; height: 100%; min-width: 960px; }
+#home { background:url('../pics/assets/home.jpg') -250px -100px; height:800px; }
+
 
 /*-------------------
 	Works
 -------------------*/
-#container { margin: 0px; width: 100%; height: 100%; min-width: 960px; opacity:0; }
 #works { position: relative; width: 100%; height: 100%; min-height: 800px; overflow: hidden; z-index: 1; }
 .contentwrapper { position: relative; width: 960px; margin: 0 auto; font-size: 13px; line-height: 25px; letter-spacing: 0px; }
 .mini-works { cursor: pointer; position: relative; float: left; width: 258px; height: 210px; color: #535353; clear: none; font-size: 14px; padding: 40px 30px 20px 30px; text-align: center; line-height: 19px; }

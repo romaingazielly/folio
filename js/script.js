@@ -17,7 +17,6 @@ var $window = $(window),
 	$worksIsOpen = false;
 
 $(function() {
-	loading();
 	positionWorks();
 
 	$(".mini-works1").click(function() { openServicePage(1); });
@@ -56,14 +55,6 @@ function openServicePage(index) {
 	
 	$(".works-detail" + index).show().css("opacity", 1);
 	$(".works-detail").animate({left: 0}, {queue: false, duration:700, easing:"easeInOutQuart"});
-}
-
-function loading() {
-	$('aside').animate({ 'width':'100%' }, 2000, function(){
-		$('aside p').animate({ opacity:1 }, 800);
-		$('header nav').animate({ opacity:1 }, 800);
-		$('#container').animate({ opacity:1}, 800);
-	});
 }
 
 function positionWorks() {

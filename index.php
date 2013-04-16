@@ -22,25 +22,37 @@
 	<header>
 		<nav>
 			<ul id="menu">
-				<li><a href="#" id="logo"></a></li>
+				<li><a href="#" id="logo">RG</a></li>
 				<li><a href="#">Home</a></li>
 				<li><a href="#works">Works</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Contact</a></li>
 			</ul>
-			<ul>
-				<li><a href="#" id="nav-fb"></a></li>
-				<li><a href="#" id="nav-twitter"></a></li>
-				<li><a href="#" id="nav-linkedin"></a></li>
-				<li><a href="#" id="nav-viadeo"></a></li>
+			<ul id="social">
+			    <li class="flip" id="nav-linkedin">
+			        <div class="recto"><a href="#1"></a></div>
+			        <div class="verso"><a href="#2"></a></div>
+			    </li>
+			    <li class="flip" id="nav-viadeo">
+			        <div class="recto"><a href="#1"></a></div>
+			        <div class="verso"><a href="#2"></a></div>
+			    </li>
+			    <li class="flip" id="nav-twitter">
+			        <div class="recto"><a href="#1"></a></div>
+			        <div class="verso"><a href="#2"></a></div>
+			    </li>
+			    <li class="flip" id="nav-facebook">
+			        <div class="recto"><a href="#1"></a></div>
+			        <div class="verso"><a href="#2"></a></div>
+			    </li>
 			</ul>
 		</nav>
-		<aside>
-			<p><span>HI !</span> I'm Romain GAZIELLY, a French web developer looking for some Freelance projects.<a href="#">8</a></p>
-		</aside>
 	</header>
 
 	<div id="container">
+		<section id="home">
+
+		</section>
 		<section id="works">
 			<div class="button-back"><img src="pics/assets/button_goback.png" border="0" alt="Go back" /></div>
 			<div class="contentwrapper">
