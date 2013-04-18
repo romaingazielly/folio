@@ -51,6 +51,7 @@
 
 	<div id="container">
 		<section id="home">
+			<img id="bgHome" src="pics/assets/home.jpg" alt="Home">
 
 		</section>
 		<section id="works">

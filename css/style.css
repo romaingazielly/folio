@@ -1,15 +1,15 @@
 /*----------------------------------
-*							
-*	Version: 1.0				  
-*	Date: 30/03/2013			  
-*	Author: Romain GAZIELLY	  
-*	Mail: romain.gazielly@gmail.com
-*	Website: www.romaingazielly.com
-*								  
+*                           
+*   Version: 1.0                  
+*   Date: 30/03/2013              
+*   Author: Romain GAZIELLY   
+*   Mail: romain.gazielly@gmail.com
+*   Website: www.romaingazielly.com
+*                                 
 *----------------------------------*/
 
 /*-------------------
-	Fonts
+    Fonts
 -------------------*/
 @font-face {
     font-family: 'nexa_bold';
@@ -23,7 +23,7 @@
 }
 
 /*-------------------
-	Global
+    Global
 -------------------*/
 a { text-decoration: none; }
 body, html{ font-size: 1em; line-height: 1.4; font-family: "proxima-nova", "Helvetica Neue", helvetica, arial, sans; width: 100%; height: 100%; font-style: normal; min-height: 100%; -webkit-font-smoothing: antialiased; }
@@ -37,7 +37,7 @@ h3 { font-size: 30px; line-height: 35px; letter-spacing: -2px; color: #333333; m
 h4 { font-size: 34px; font-family: "Helvetica Neue", Helvetica, Arial, Sans; color: #333333; letter-spacing: -2px; margin: 40px 0px 25px 0px; }
 
 /*-------------------
-	Header
+    Header
 -------------------*/
 header { width:100%; }
 header nav { background: #fff; height:80px; width:960px; margin:auto; }
@@ -45,7 +45,7 @@ header nav ul li { width:99px; }
 header nav ul li a { height:80px; display:block; border-top:solid 1px #fff; border-bottom:solid 1px #fff; box-sizing:border-box; } 
 
 header nav ul#menu li { float:left; }
-header nav ul#menu li a { font:16px "nexa_bold"; color:#2a2a26; padding-top:28px; text-align:center; }
+header nav ul#menu li a { font:12px "nexa_bold"; color:#2a2a26; padding-top:34px; text-align:center; text-transform: uppercase; }
 header nav ul#menu li a:not(#logo):hover { color:#a1a1a1; }
 header nav ul#menu li a#logo { font-size:50px; padding-top:10px; }
 
@@ -67,14 +67,15 @@ header nav ul#social li.flip:hover .verso { -webkit-transform:rotateY(0deg); }
 #nav-linkedin .recto { background:url('../pics/assets/linkedin-flip.png') no-repeat center #fff; }
 #nav-linkedin .verso { background:url('../pics/assets/linkedin-flap.png') no-repeat center rgba(42,42,38,1); }
  /*-------------------
-	Home
+    Home
 -------------------*/
 #container { margin: 0px; width: 100%; height: 100%; min-width: 960px; }
-#home { background:url('../pics/assets/home.jpg') -250px -100px; height:800px; }
+#home { position:relative; overflow:hidden }
+#bgHome { position:absolute; z-index:-1; left:50%; }
 
 
 /*-------------------
-	Works
+    Works
 -------------------*/
 #works { position: relative; width: 100%; height: 100%; min-height: 800px; overflow: hidden; z-index: 1; }
 .contentwrapper { position: relative; width: 960px; margin: 0 auto; font-size: 13px; line-height: 25px; letter-spacing: 0px; }

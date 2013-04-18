@@ -12,11 +12,17 @@
 	Code
 -------------------*/
 var $window = $(window),
-	$windowHeight = $window.height(),
-	$windowWidth = $window.width(),
+	$h = $window.height(),
+	$w = $window.width(),
 	$worksIsOpen = false;
 
 $(function() {
+
+	// Redimentionne la home
+	resizeHome();
+	$(window).resize(function(){ 
+		resizeHome();
+	}); 
 	positionWorks();
 
 	$(".mini-works1").click(function() { openServicePage(1); });
@@ -29,7 +35,7 @@ $(function() {
 		for(var i = 6; i > 0; i--) {
 	   		$(".mini-works" + i).animate({left: 0}, {queue: false, duration:700, easing:"easeInOutQuart"});
 	  	}
-	  	$(".works-detail").animate({left: $windowWidth}, {queue: false, duration:700, easing:"easeInOutQuart"});
+	  	$(".works-detail").animate({left: $w}, {queue: false, duration:700, easing:"easeInOutQuart"});
 	});
 
 	$('nav ul#menu li a').on('click', function(e) {
@@ -47,9 +53,9 @@ function openServicePage(index) {
 	toggleBackButton();
 	
 	for(var i = 2; i > 0; i--) {
-		$(".mini-works" + i).animate({left: -$windowWidth}, {queue: false, duration:700, easing:"easeInOutQuart"});
+		$(".mini-works" + i).animate({left: -$w}, {queue: false, duration:700, easing:"easeInOutQuart"});
 	}
-	$(".works-detail").css("left", $windowWidth);
+	$(".works-detail").css("left", $w);
 
 	$(".works-detail-content").css("opacity", 0).hide();
 	
@@ -59,11 +65,11 @@ function openServicePage(index) {
 
 function positionWorks() {
 	if($worksIsOpen == true) {
-		$(".mini-works").css("left", -$windowWidth + "px");
+		$(".mini-works").css("left", -$w + "px");
 		$(".works-detail").css("left", 0);
 	} else {
 		$(".mini-works").css("left", "0px");
-		$(".works-detail").css("left", -$windowWidth + "px");
+		$(".works-detail").css("left", -$w + "px");
 	}
 }
 
@@ -73,4 +79,26 @@ function toggleBackButton() {
 	} else {
 		$(".button-back").stop().animate({marginLeft:-90}, {queue: false, duration:300, easing:"easeOutQuad"});
 	}
+}
+
+function resizeHome() {
+	if (document.all) {
+		$h=document.body.clientHeight;
+		$w=document.body.clientWidth;
+	} else {
+		$w=window.innerWidth;
+		$h=window.innerHeight;
+	}
+
+	$('#home').css({ 'height': $h - 80 + 'px' });
+	$('#bgHome').css({ 'width': $w + 'px' });
+
+	//Centrer
+	if ($w > 960) {
+		$('#bgHome').css({ 'margin-left': - Math.round($w/2), left: '50%' });
+	}
+	else {
+		$('#bgHome').css({ 'margin-left': 0, left: 0 });
+	}
+	console.log($w);
 }
