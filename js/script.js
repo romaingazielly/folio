@@ -25,15 +25,16 @@ $(function() {
 	}); 
 	positionWorks();
 
-	$(".mini-works1").click(function() { openServicePage(1); });
-	$(".mini-works2").click(function() { openServicePage(2); });
-
+	$(".mini-works").click(function() { 
+		var workIdNumber = $(this).attr("id").substr(10);
+		openServicePage(workIdNumber); 
+	});
 
 	$(".button-back").click(function() {
 		toggleBackButton();
 		$worksIsOpen = false;
 		for(var i = 6; i > 0; i--) {
-	   		$(".mini-works" + i).animate({left: 0}, {queue: false, duration:700, easing:"easeInOutQuart"});
+	   		$("#mini-works" + i).animate({left: 0}, {queue: false, duration:700, easing:"easeInOutQuart"});
 	  	}
 	  	$(".works-detail").animate({left: $w}, {queue: false, duration:700, easing:"easeInOutQuart"});
 	});
@@ -50,16 +51,17 @@ $(function() {
 
 function openServicePage(index) {
 	$worksIsOpen = true;
+	var nbProject = $('.mini-works').length;
 	toggleBackButton();
 	
-	for(var i = 2; i > 0; i--) {
-		$(".mini-works" + i).animate({left: -$w}, {queue: false, duration:700, easing:"easeInOutQuart"});
+	for(var i = nbProject; i > 0; i--) {
+		$("#mini-works" + i).animate({left: -$w}, {queue: false, duration:700, easing:"easeInOutQuart"});
 	}
 	$(".works-detail").css("left", $w);
 
 	$(".works-detail-content").css("opacity", 0).hide();
 	
-	$(".works-detail" + index).show().css("opacity", 1);
+	$("#works-detail" + index).show().css("opacity", 1);
 	$(".works-detail").animate({left: 0}, {queue: false, duration:700, easing:"easeInOutQuart"});
 }
 
@@ -89,7 +91,7 @@ function resizeHome() {
 		$w=window.innerWidth;
 		$h=window.innerHeight;
 	}
-
+	$('#container section').css({ 'height': $h +'px' });
 	$('#home').css({ 'height': $h - 80 + 'px' });
 	$('#bgHome').css({ 'width': $w + 'px' });
 

@@ -66,13 +66,13 @@ header nav ul#social li.flip:hover .verso { -webkit-transform:rotateY(0deg); }
 #nav-viadeo .verso { background:url('../pics/assets/viadeo-flap.png') no-repeat center rgba(42,42,38,1); }
 #nav-linkedin .recto { background:url('../pics/assets/linkedin-flip.png') no-repeat center #fff; }
 #nav-linkedin .verso { background:url('../pics/assets/linkedin-flap.png') no-repeat center rgba(42,42,38,1); }
+ 
  /*-------------------
     Home
 -------------------*/
 #container { margin: 0px; width: 100%; height: 100%; min-width: 960px; }
-#home { position:relative; overflow:hidden }
+#home { position:relative; min-height: 800px; overflow:hidden; }
 #bgHome { position:absolute; z-index:-1; left:50%; }
-
 
 /*-------------------
     Works
@@ -91,3 +91,10 @@ header nav ul#social li.flip:hover .verso { -webkit-transform:rotateY(0deg); }
 .mini-works:hover .description, .mini-works:hover a { display: none; }
 .mini-works:hover .plus { opacity: 0; }
 .mini-works:hover li { display: block; }
+
+/*-------------------
+    About
+-------------------*/
+#about { position: relative; width: 100%; height: 100%; min-height: 800px; overflow: hidden; z-index: 1; background:#505050; }
+
+
