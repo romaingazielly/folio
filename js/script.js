@@ -1,7 +1,7 @@
 /*----------------------------------
 *							
-*	Version: 1.0				  
-*	Date: 30/03/2013			  
+*	Version: 2.0				  
+*	Date: 11/11/2015			  
 *	Author: Romain GAZIELLY	  
 *	Mail: romain.gazielly@gmail.com
 *	Website: www.romaingazielly.com
@@ -22,6 +22,7 @@ $(function() {
 	resizeHome();
 	$(window).resize(function(){ 
 		resizeHome();
+		positionWorks();
 	}); 
 	positionWorks();
 
@@ -91,16 +92,9 @@ function resizeHome() {
 		$w=window.innerWidth;
 		$h=window.innerHeight;
 	}
-	$('#container section').css({ 'height': $h +'px' });
-	$('#home').css({ 'height': $h - 80 + 'px' });
-	$('#bgHome').css({ 'width': $w + 'px' });
+	//$('#container section').css({ 'height': $h +'px' });
+	$('#home').css({ 'height': $h - 80 + 'px' }); // Header
 
-	//Centrer
-	if ($w > 960) {
-		$('#bgHome').css({ 'margin-left': - Math.round($w/2), left: '50%' });
-	}
-	else {
-		$('#bgHome').css({ 'margin-left': 0, left: 0 });
-	}
-	console.log($w);
+	// Texte
+	$('#home-title').css({'marginTop':($h/2)-80 });
 }
