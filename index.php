@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="fr">
 <head>
@@ -55,7 +54,7 @@
 			<div id="home-title">
 				<h1>
 					<span>Welcome! My name is Romain</span>
-					<span>I'm a French <strong>Front-end Developper</strong> living in Paris</span>
+					<span>I'm a French <strong>Front-end Developer</strong> living in Paris</span>
 				</h1>
 				<h2>You can find here some projects I have been working on during last years</h2>
 			</div>
@@ -79,11 +78,12 @@
 							 --><figcaption>
 									<h1>Théâtre des Champs-Élysées</h1>
 									<p class="type">Site responsive, optimisé tablette et mobile</p>
-									<p>Pour cette version 2016, nous avons choisi de repartir de 0. Le TCE étant en effet refondu chaque année depuis 4 ans, la base de code était devenue trop désordonnée. Ce fût donc pour nous l'occasion de passer le site sous Symfony 2. Tout comme la version précédente, chaque page est affichée selon 2 systèmes de rendus :</p>
+									<p>Pour cette version 2016, nous avons choisi de repartir de zéro. Le TCE étant en effet refondu chaque année depuis 4 ans, la base de code était devenue trop désordonnée. Ce fût donc pour nous l'occasion de passer le site sous Symfony 2. Tout comme la version précédente, chaque page est affichée selon 2 systèmes de rendus :</p>
 									<ul>
 										<li>- Version desktop (1200px) et tablette (1024px)</li>
 										<li>- Version mobile (320px)</li>
 									</ul>
+									<a class="url" href="http://www.theatrechampselysees.fr" target="_blank">http://www.theatrechampselysees.fr</a>
 								</figcaption>
 							</figure>
 						</aside>
