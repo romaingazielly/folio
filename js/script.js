@@ -72,7 +72,12 @@ function openServicePage(index) {
 	projectHeight = $("#works-detail" + index).height();
 	$(".contentwrapper").animate({height: projectHeight + 75}, {queue: false, duration:700, easing:"easeInOutQuart"});
 
-	$.scrollTo( $("#works-detail" + index), 800 );
+	if($w > 720){
+		$.scrollTo( $("#works-detail" + index), 800 );
+	}else{
+		$.scrollTo( $("#works-detail" + index), 0 );
+	}
+
 }
 
 function positionWorks() {
