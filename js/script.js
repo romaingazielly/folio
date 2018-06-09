@@ -36,7 +36,7 @@ $(function() {
 		openServicePage(workIdNumber); 
 	});
 
-	$(".button-back").on('click', function() {
+	$(".button-back").on('touchend click', function() {
 		toggleBackButton();
 		$worksIsOpen = false;
 		for(var i = $nbProject; i > 0; i--) {
