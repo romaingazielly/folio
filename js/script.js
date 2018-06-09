@@ -19,6 +19,7 @@ var $window = $(window),
 $(function() {
 
 	$nbProject = $('.mini-works').length;
+	$heightProject = $(".contentwrapper").height();
 
 
 	// Redimentionne la home
@@ -88,7 +89,7 @@ function toggleBackButton() {
 		$(".button-back").stop().delay(1100).animate({marginLeft:0}, {queue: true, duration:300, easing:"easeOutQuad"});
 	} else {
 		$(".button-back").stop().animate({marginLeft:-90}, {queue: false, duration:300, easing:"easeOutQuad"});
-		$(".contentwrapper").animate({height: 420}, {queue: false, duration:700, easing:"easeInOutQuart"});
+		$(".contentwrapper").animate({height: $heightProject}, {queue: false, duration:700, easing:"easeInOutQuart"});
 	}
 }
 
