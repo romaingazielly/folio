@@ -45,13 +45,13 @@ $(function() {
 	  	$(".works-detail").animate({left: $w}, {queue: false, duration:700, easing:"easeInOutQuart"});
 	});
 
-	// $('nav ul#menu li a').on('click', function(e) {
-	// 	e.preventDefault();
-	// 	$this = $(this);
+	$('nav ul#menu li a').on('click', function(e) {
+		e.preventDefault();
+		$this = $(this);
 		
-	// 	page = $this.attr('href');
-	// 	window.scrollTo( page, 800 );
-	// });
+		page = $this.attr('href');
+		$.scrollTo( page, 800 );
+	});
 
 });
 
@@ -72,6 +72,7 @@ function openServicePage(index) {
 	projectHeight = $("#works-detail" + index).height();
 	$(".contentwrapper").animate({height: projectHeight + 75}, {queue: false, duration:700, easing:"easeInOutQuart"});
 
+	$.scrollTo( $("#works-detail" + index), 800 );
 }
 
 function positionWorks() {
