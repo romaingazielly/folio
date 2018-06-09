@@ -31,12 +31,12 @@ $(function() {
 	positionWorks();
 
 
-	$(".mini-works").click(function() { 
+	$(".mini-works").on('click', function() { 
 		var workIdNumber = $(this).attr("id").substr(10);
 		openServicePage(workIdNumber); 
 	});
 
-	$(".button-back").click(function() {
+	$(".button-back").on('click', function() {
 		toggleBackButton();
 		$worksIsOpen = false;
 		for(var i = $nbProject; i > 0; i--) {
